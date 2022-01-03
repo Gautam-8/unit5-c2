@@ -1,10 +1,10 @@
 .all{
     margin:20px;
-    border:1px solid rgb(129, 127, 127);
+    border:1px solid rgb(196, 191, 191);
     width:50%;  
 }
 .all:hover{
-    box-shadow: 2px 2px 2px 2px rgb(235, 229, 229);
+    box-shadow: 4px 4px 4px 4px rgb(235, 229, 229);
 }
 .all p{
     margin-left:10px;
