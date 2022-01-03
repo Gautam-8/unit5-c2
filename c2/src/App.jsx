@@ -123,11 +123,14 @@ function App() {
 
 <h2 style={{marginLeft:"100px"}}>Details</h2>
 
-{show? <div style={{marginLeft:"100px"}}>
+{show? <div className='foodflex' style={{marginLeft:"100px"}}>
+  <div >
   <i> Title: {show.title}</i> <br/>
   <i> Instructions: {show.instructions}</i><br/>
   <i> Time: {show.time}min</i><br/>
   <i> Ingredients: {show.ingredients}</i><br/>
+  </div>
+  
   <img src={show.image} />
           
 </div> : null}
