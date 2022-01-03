@@ -55,6 +55,14 @@ function App() {
   console.log(show)
 
   }
+  const getBytime = async () => {
+
+  let res = await fetch("http://localhost:3001/food?_sort=time&_order=desc");
+  let data = await res.json();
+  console.log(data);
+  setItem(data);
+
+  }
  
   
   return (
@@ -66,27 +74,27 @@ function App() {
        <h2>Recipe</h2>
    <form   onSubmit={handleSubmit}>
 <label>
- title  <input type="text" name="title" onChange={handleChange} />  <br/>
+ <i>Title</i>  <input type="text" name="title" onChange={handleChange} />  <br/>
 </label>
 
 <label>
-Ingredients
+<i>Ingredients</i>
             <input 
             type="text" name="ingredients" onChange={handleChange} /> <br/>
 </label>
 
 <label>
- Time
-         <input type="text" name="time" onChange={handleChange} /> <br/>
+<i>Time</i> 
+         <input type="number" name="time" onChange={handleChange} /> <br/>
 </label>
 
 <label>
- Instructions
+ <i>Instructions</i>
          <input type="text" name="instructions" onChange={handleChange}/> <br/>
 </label>
 
 <label>
-Image
+<i>Image</i>
          <input type="text" name="image" onChange={handleChange}/> <br/>
 </label>
     
@@ -96,11 +104,14 @@ Image
    </div>
    
 <div className='scrolll'>
+
+<h3>Recipe cards</h3>
+
 {item.map((e , i) => (
   <div className="all" key={i}>
-      <p style={{ textDecoration:"underline",cursor:"pointer"}}  onClick={() => handleShow(e)}><i>Title :</i>{e.title}</p>
+      <p style={{ textDecoration:"underline",cursor:"pointer"}}  onClick={() => handleShow(e)}>{e.title}</p>
 
-    <p><i>Time : </i>{e.time}</p>
+    <p><i>Time : </i>{e.time}min</p>
  
   </div>
 ))}
@@ -108,12 +119,14 @@ Image
 
     </div>
 
+    <button onClick={getBytime} className='sort'>Sort by time</button>
+
 <h2 style={{marginLeft:"100px"}}>Details</h2>
 
 {show? <div style={{marginLeft:"100px"}}>
   <i> Title: {show.title}</i> <br/>
   <i> Instructions: {show.instructions}</i><br/>
-  <i> Time: {show.time}</i><br/>
+  <i> Time: {show.time}min</i><br/>
   <i> Ingredients: {show.ingredients}</i><br/>
   <img src={show.image} />
           
