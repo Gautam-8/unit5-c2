@@ -1,9 +1,10 @@
 .all{
     margin:20px;
-    border:1px solid black;
-    width:50%;
-
-    
+    border:1px solid rgb(129, 127, 127);
+    width:50%;  
+}
+.all:hover{
+    box-shadow: 2px 2px 2px 2px rgb(235, 229, 229);
 }
 .all p{
     margin-left:10px;
@@ -44,3 +45,15 @@ label{
     margin:10px;
     margin-left:15px;
 }
+.foodflex{
+    display: flex;
+    border:1px solid black;
+    width:fit-content;
+    padding: 20px;
+}
+img{
+    margin-left:50px;
+    width:400px;
+    height: 300px;
+}
+
