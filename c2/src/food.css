@@ -5,6 +5,9 @@
 
     
 }
+.all p{
+    margin-left:10px;
+}
 .scrolll{
      border:1px solid black;
    margin-left:10%;
@@ -20,4 +23,24 @@
 .form input{
     width:200px;
     margin-left:10%;
+}
+label{
+    margin-left:20px;
+}
+
+.form h2{
+    margin-left: 20px;
+}
+.form i{
+  margin:0;
+}
+
+.sort{
+    margin-left:67%;
+    margin-top:10px;
+    cursor: pointer;
+}
+.scrolll h3{
+    margin:10px;
+    margin-left:15px;
 }
