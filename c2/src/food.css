@@ -1,0 +1,23 @@
+.all{
+    margin:20px;
+    border:1px solid black;
+    width:50%;
+
+    
+}
+.scrolll{
+     border:1px solid black;
+   margin-left:10%;
+   width:25%;
+   height: 250px;
+   overflow-y: scroll;
+    
+}
+
+.form{
+    width:500px;
+}
+.form input{
+    width:200px;
+    margin-left:10%;
+}
